@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #EFDAD7;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #694E4E;
+}
+
+.half-width {
+    height: 570px;
+    background: #F3C5C5;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.generate-btn {
+    margin-top: 140px;
+    width: 180px;
+    padding: 50px;
+    border-radius: 50%;
+    border: 8px solid #694E4E;
+    background-color: #886F6F;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 rgba(105, 78, 78, 0.2), 0 0 0 15px rgba(105, 78, 78, 0.2),
+        0 0 0 30px rgba(105, 78, 78, 0.2);
+    animation: ripple-wave 1s linear infinite;
+    animation-play-state: running;
+}
+
+.generate-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input[type='text'] {
+    background-color: #C1A3A3;
+    padding: 10px 0px;
+    color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #886F6F;
+    height: 50px;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+    box-shadow: none;
+}
+
+input[type='text']:focus {
+    background-color: #C1A3A3;
+    box-shadow: none;
+    border-color: #886F6F;
+    color: #fff;
+}
+
+.numbers {
+    margin: 30px 0;
+}
+
+.calc-typed {
+    margin-top: 20px;
+    font-size: 45px;
+    text-align: right;
+    color: #fff;
+}
+
+.calc-button-row {
+    width: 100%;
+}
+
+.all-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0 100px;
+}
+
+.button {
+    width: 100%;
+    background: #886F6F;
+    color: #fff;
+    padding: 20px 0;
+    display: inline-block;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.blink-me {
+    color: #E0B612;
+}
+
+.submit-btn {
+    border: none;
+    margin-top: 20px;
+    padding: 10px 120px;
+    border-radius: 5px;
+    background: #694E4E;
+    color: #fff;
+}
+
+.notify {
+    color: #694E4E;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    display: none;
+}
+
+.notify-section {
+    width: 35%;
+    margin: 0 auto;
+}
+
+.action-left {
+    color: #632626;
+    margin-top: 10px;
+}
+
+
+@keyframes ripple-wave {
+    to {
+        box-shadow: 0 0 0 15px rgba(105, 78, 78, 0.2),
+            0 0 0 30px rgba(105, 78, 78, 0.2), 0 0 0 45px rgba(105, 78, 78, 0);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .all-buttons {
+        padding: 0 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .all-buttons {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .pin-generator {
+        margin-bottom: 40px;
+    }
+
+    .all-buttons {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .pin-generator {
+        margin-bottom: 20px;
+    }
+
+    .all-buttons {
+        padding: 0;
+    }
+
+    .submit-btn {
+        padding: 10px 0;
+        width: 100%;
+    }
+}
